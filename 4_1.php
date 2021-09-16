@@ -14,7 +14,7 @@
     </form>
 
     <?php
-    if (isset($_GET['name'])) {
+    if (!empty($_GET['name'])&& !empty($_GET['surname'])) {
       // echo "Imię: ".$_POST['name'];
       // echo "Nazwisko: ".$_POST['surname'];
       echo <<< L
@@ -22,6 +22,9 @@
         Imię: $_GET[name]<br>
         Nazwisko: {$_GET['surname']}
 L;
+    }
+    else {
+      echo "Wypełnij dane";
     }
     ?>
   </body>
