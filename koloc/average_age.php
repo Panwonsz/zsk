@@ -7,6 +7,9 @@
   <body>
     <?php
       if (!isset($_POST["person"])) {
+        if (isset($_GET['powitanie'])) {
+          echo $_GET['powitanie'];
+        }
         echo <<< FORMCOUNTPERSON
         <h3>Ilość osób w rodzinie</h3>
         <form method="post">
@@ -41,7 +44,8 @@
             $count++;
           }
         }
-        echo "Średni wiek ".number_format($avg/$count, 2);
+        echo "Średni wiek ".number_format($avg/$count, 2)."<br>";
+        echo '<a href="average_age.php?powitanie=Witamy ponownie na stronie głównej">Strona główna</a>';
       }
     ?>
   </body>

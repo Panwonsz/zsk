@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pl" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -15,13 +14,13 @@
 
     <?php
     if (isset($_POST['name'])) {
-      // echo "Imię: ".$_POST['name'];
-      // echo "Nazwisko: ".$_POST['surname'];
+      echo "Imię: ".$_POST['name'];
+      echo "Nazwisko: ".$_POST['surname'];
       echo <<< L
       <hr>
         Imię: $_POST[name]<br>
         Nazwisko: {$_POST['surname']}
-L;
+      L;
     }
     ?>
   </body>
